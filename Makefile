@@ -18,7 +18,7 @@ shell:
 	${DOCKER_COMPOSE} exec app php bash
 migrate:
 	${DOCKER_COMPOSE} exec app php artisan key:generate
-	${DOCKER_COMPOSE} exec app php artisan migrate:fresh
+	make seed
 seed:
 	${DOCKER_COMPOSE} exec app php artisan migrate:fresh --seed
 test:
@@ -30,3 +30,5 @@ npm_prod:
 	${DOCKER_COMPOSE} run --rm npm run prod
 npm_watch:
 	${DOCKER_COMPOSE} run --rm npm run watch
+work:
+	${DOCKER_COMPOSE} exec app php artisan queue:work
