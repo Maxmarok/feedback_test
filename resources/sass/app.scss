@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+
+    &-heading {
+        text-align: center;
+    }
+
+    &-body {
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    &-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    &-sorting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        > *:not(:last-child) {
+            margin-right: 20px;
+        }
+
+    }
+}
+
+
